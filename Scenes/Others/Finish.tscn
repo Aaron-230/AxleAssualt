@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://beri6uf6m05aw"]
+
+[ext_resource type="Script" uid="uid://bg6h6mym3r2hd" path="res://Scripts/Others/Finish.gd" id="1_cnn3p"]
+
+[node name="Finish" type="CanvasLayer" unique_id=1547321629]
+script = ExtResource("1_cnn3p")
+
+[node name="Panel" type="Panel" parent="." unique_id=1372567025]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Container" type="VBoxContainer" parent="Panel" unique_id=1778719254]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -23.5
+offset_right = 20.0
+offset_bottom = 23.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Text" type="Label" parent="Panel/Container" unique_id=1795337078]
+layout_mode = 2
+text = "Text"
+
+[node name="Next" type="Button" parent="Panel/Container" unique_id=1458301356]
+layout_mode = 2
+text = "Go to Next Level!"
+
+[node name="End" type="Button" parent="Panel/Container" unique_id=1770590749]
+layout_mode = 2
+text = "End Game"
+
+[connection signal="pressed" from="Panel/Container/Next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="Panel/Container/End" to="." method="_on_end_pressed"]

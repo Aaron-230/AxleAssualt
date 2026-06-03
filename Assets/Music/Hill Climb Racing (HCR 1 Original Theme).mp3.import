@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bgcb260xo0y1c"
+path="res://.godot/imported/Hill Climb Racing (HCR 1 Original Theme).mp3-6fd9ed1b0e4a8a24ec97390dd3316ad1.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Hill Climb Racing (HCR 1 Original Theme).mp3"
+dest_files=["res://.godot/imported/Hill Climb Racing (HCR 1 Original Theme).mp3-6fd9ed1b0e4a8a24ec97390dd3316ad1.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

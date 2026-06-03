@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://pfnfg4rbk23w"]
+
+[ext_resource type="Script" uid="uid://ww633cg17ud0" path="res://Scripts/Others/Pause.gd" id="1_8b07u"]
+
+[node name="Pause Menu" type="CanvasLayer" unique_id=1576515133]
+script = ExtResource("1_8b07u")
+
+[node name="Panel" type="Panel" parent="." unique_id=599543632]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Container" type="VBoxContainer" parent="Panel" unique_id=1016355218]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -23.5
+offset_right = 20.0
+offset_bottom = 23.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/Container" unique_id=598588661]
+layout_mode = 2
+text = "The Game is Paused"
+
+[node name="Resume" type="Button" parent="Panel/Container" unique_id=1044329241]
+layout_mode = 2
+text = "Resume"
+
+[node name="Restart" type="Button" parent="Panel/Container" unique_id=1668556788]
+layout_mode = 2
+text = "Restart"
+
+[node name="Exit" type="Button" parent="Panel/Container" unique_id=1841298431]
+layout_mode = 2
+text = "Exit"
+
+[connection signal="pressed" from="Panel/Container/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Panel/Container/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Panel/Container/Exit" to="." method="_on_exit_pressed"]

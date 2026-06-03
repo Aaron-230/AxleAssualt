@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://cmo4mjt7kwq10"]
+
+[ext_resource type="Texture2D" uid="uid://ctbwtsuqt2vc1" path="res://Assets/Pickups/Coin10.png" id="1_61d3y"]
+[ext_resource type="FontFile" uid="uid://bypvhng2nwos4" path="res://Assets/Font/FredokaOne-Regular.ttf" id="2_58pou"]
+[ext_resource type="Texture2D" uid="uid://b2xwgmowsg1g0" path="res://Assets/Pickups/Fuel.png" id="3_u6yhr"]
+[ext_resource type="Texture2D" uid="uid://0is80hj2k7jr" path="res://Assets/Other/Alarm.png" id="4_6f1cw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dewlx"]
+bg_color = Color(0.30588236, 0.30588236, 0.30588236, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 6.0
+expand_margin_top = 6.0
+expand_margin_right = 6.0
+expand_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hfhsn"]
+bg_color = Color(0.38431373, 0.80784315, 0.29411766, 1)
+border_width_top = 6
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Animation" id="Animation_qwshj"]
+resource_name = "Alarm"
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Alarm:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 2),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.07777778, 0.07777778, 0.08888888, -0.08888888, 1, -0.16666667, 0.16666667, 0, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+
+[sub_resource type="Animation" id="Animation_48q88"]
+resource_name = "Idle"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Alarm:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_xjg7p"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Alarm:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mg6lk"]
+_data = {
+&"Alarm": SubResource("Animation_qwshj"),
+&"Idle": SubResource("Animation_48q88"),
+&"RESET": SubResource("Animation_xjg7p")
+}
+
+[node name="UI" type="CanvasLayer" unique_id=717673355]
+
+[node name="Coin" type="TextureRect" parent="." unique_id=324818629]
+offset_left = -2.0
+offset_top = 193.0
+offset_right = 198.0
+offset_bottom = 393.0
+texture = ExtResource("1_61d3y")
+
+[node name="Score" type="Label" parent="Coin" unique_id=460051890]
+layout_mode = 0
+offset_left = 206.0
+offset_top = 63.0
+offset_right = 246.0
+offset_bottom = 143.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("2_58pou")
+theme_override_font_sizes/font_size = 64
+text = "0"
+
+[node name="Fuel" type="TextureRect" parent="." unique_id=266183652]
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 201.0
+offset_bottom = 199.0
+texture = ExtResource("3_u6yhr")
+
+[node name="Level" type="ProgressBar" parent="Fuel" unique_id=261495497]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 80.0
+offset_right = 600.0
+offset_bottom = 130.0
+theme_override_styles/background = SubResource("StyleBoxFlat_dewlx")
+theme_override_styles/fill = SubResource("StyleBoxFlat_hfhsn")
+value = 50.0
+show_percentage = false
+
+[node name="Alarm" type="TextureRect" parent="Fuel" unique_id=77460294]
+layout_mode = 0
+offset_left = 617.0
+offset_top = 37.0
+offset_right = 745.0
+offset_bottom = 165.0
+texture = ExtResource("4_6f1cw")
+
+[node name="Animation" type="AnimationPlayer" parent="Fuel" unique_id=1495759627]
+libraries/ = SubResource("AnimationLibrary_mg6lk")

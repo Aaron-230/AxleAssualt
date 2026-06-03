@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://c44mwk5kphssf"]
+
+[ext_resource type="Script" uid="uid://fbfe7bpvdcbs" path="res://Scripts/Vehicle.gd" id="1_cac47"]
+[ext_resource type="PackedScene" uid="uid://cahug3eth3uwx" path="res://Scenes/Wheel.tscn" id="1_krx02"]
+[ext_resource type="Texture2D" uid="uid://cb10cgftxtmdc" path="res://Assets/Car/Car.png" id="2_6k0ix"]
+[ext_resource type="Texture2D" uid="uid://bxn2sixcp41gu" path="res://Assets/Characters/Body.png" id="3_jx448"]
+[ext_resource type="Texture2D" uid="uid://cwgpmn36lcckg" path="res://Assets/Characters/Head.png" id="4_d32g4"]
+[ext_resource type="AudioStream" uid="uid://dp7lh8t0qd0ku" path="res://Assets/Audio/EngineSound.ogg" id="6_d32g4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lgghq"]
+radius = 62.008064
+
+[node name="Vehicle" type="RigidBody2D" unique_id=1789237786 groups=["Player"]]
+gravity_scale = 3.0
+script = ExtResource("1_cac47")
+
+[node name="Back Wheel Joint" type="PinJoint2D" parent="." unique_id=1768201456]
+position = Vector2(-152, 83)
+node_a = NodePath("..")
+node_b = NodePath("Wheel")
+softness = 1.0
+
+[node name="Wheel" parent="Back Wheel Joint" unique_id=815716636 instance=ExtResource("1_krx02")]
+
+[node name="Front Wheel Joint" type="PinJoint2D" parent="." unique_id=1592406101]
+position = Vector2(108, 83)
+node_a = NodePath("..")
+node_b = NodePath("Wheel")
+softness = 1.0
+
+[node name="Wheel" parent="Front Wheel Joint" unique_id=1202497038 instance=ExtResource("1_krx02")]
+
+[node name="Body" type="Sprite2D" parent="." unique_id=835846553]
+position = Vector2(-50, -45)
+texture = ExtResource("3_jx448")
+
+[node name="Head" type="RigidBody2D" parent="." unique_id=1287038281 groups=["Player"]]
+position = Vector2(-57, -124)
+collision_layer = 4
+gravity_scale = 7.0
+
+[node name="Sprite" type="Sprite2D" parent="Head" unique_id=601113068]
+texture = ExtResource("4_d32g4")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Head" unique_id=131167046]
+shape = SubResource("CircleShape2D_lgghq")
+
+[node name="Neck" type="PinJoint2D" parent="Head" unique_id=86252752]
+node_a = NodePath("..")
+node_b = NodePath("../..")
+
+[node name="Car" type="Sprite2D" parent="." unique_id=769038030]
+texture = ExtResource("2_6k0ix")
+
+[node name="Collision Polygon" type="CollisionPolygon2D" parent="." unique_id=719667042]
+polygon = PackedVector2Array(-133, -59, -205, -54, -221, -41, -221, 87, 213, 85, 214, -3, 104, -46, 10, -57)
+
+[node name="Engine" type="AudioStreamPlayer" parent="." unique_id=529017473]
+stream = ExtResource("6_d32g4")
+autoplay = true
+
+[node name="GameOver" type="Timer" parent="." unique_id=23030037]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="timeout" from="GameOver" to="." method="_on_game_over_timeout"]

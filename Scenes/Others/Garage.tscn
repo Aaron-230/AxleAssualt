@@ -1,0 +1,133 @@
+[gd_scene format=3 uid="uid://56yiufrgtgp0"]
+
+[ext_resource type="Script" uid="uid://dmdwmtk7fi6y0" path="res://Scripts/Others/Garage.gd" id="1_2mg76"]
+[ext_resource type="Texture2D" uid="uid://cb10cgftxtmdc" path="res://Assets/Car/Car.png" id="1_aivdc"]
+[ext_resource type="FontFile" uid="uid://bypvhng2nwos4" path="res://Assets/Font/FredokaOne-Regular.ttf" id="1_r2xsu"]
+[ext_resource type="Texture2D" uid="uid://c8vod3y32ixjb" path="res://Assets/Car/RedCar.png" id="2_0s0jp"]
+[ext_resource type="Texture2D" uid="uid://8qfkmud0lst4" path="res://Assets/Car/Wheel.png" id="3_fxq6d"]
+[ext_resource type="Texture2D" uid="uid://c6uqm6y83mcxt" path="res://Assets/Car/WheelMedium.png" id="4_r2xsu"]
+[ext_resource type="Texture2D" uid="uid://dm05dy5d0k246" path="res://Assets/Car/WheelBig.png" id="5_2mg76"]
+[ext_resource type="Texture2D" uid="uid://cwgpmn36lcckg" path="res://Assets/Characters/Head.png" id="7_2mg76"]
+[ext_resource type="Texture2D" uid="uid://5q251ffujs8" path="res://Assets/Characters/Head2.png" id="8_lpsdf"]
+[ext_resource type="AudioStream" uid="uid://11yorvfp1cq7" path="res://Assets/Music/Funk Break (HCR 1 Menu Screen).mp3" id="10_lpsdf"]
+
+[node name="Garage" type="Control" unique_id=541741]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2mg76")
+nextScene = "uid://bgk8hnxu5ceh5"
+
+[node name="Panel" type="Panel" parent="." unique_id=435661529]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=992627980]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -21.5
+offset_right = 20.0
+offset_bottom = 21.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Container" type="HBoxContainer" parent="VBoxContainer" unique_id=327650442]
+layout_mode = 2
+
+[node name="Car" type="VBoxContainer" parent="VBoxContainer/Container" unique_id=1982662729]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Container/Car" unique_id=276826052]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_r2xsu")
+theme_override_font_sizes/font_size = 24
+text = "Select your Car: "
+
+[node name="Red" type="TextureButton" parent="VBoxContainer/Container/Car" unique_id=47579150]
+layout_mode = 2
+texture_normal = ExtResource("2_0s0jp")
+
+[node name="Blue" type="TextureButton" parent="VBoxContainer/Container/Car" unique_id=1903796691]
+layout_mode = 2
+texture_normal = ExtResource("1_aivdc")
+
+[node name="Wheel" type="VBoxContainer" parent="VBoxContainer/Container" unique_id=744008804]
+clip_contents = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Container/Wheel" unique_id=1633489530]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_r2xsu")
+theme_override_font_sizes/font_size = 24
+text = "Select the Wheel: "
+
+[node name="Small" type="TextureButton" parent="VBoxContainer/Container/Wheel" unique_id=1752463794]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_fxq6d")
+
+[node name="Medium" type="TextureButton" parent="VBoxContainer/Container/Wheel" unique_id=1074122892]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("4_r2xsu")
+
+[node name="Big" type="TextureButton" parent="VBoxContainer/Container/Wheel" unique_id=533464639]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("5_2mg76")
+
+[node name="Sprite" type="VBoxContainer" parent="VBoxContainer/Container" unique_id=1212893002]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Container/Sprite" unique_id=1041393570]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_r2xsu")
+theme_override_font_sizes/font_size = 24
+text = "Select the Character: "
+
+[node name="Human" type="TextureButton" parent="VBoxContainer/Container/Sprite" unique_id=1139621497]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource("7_2mg76")
+
+[node name="Robot" type="TextureButton" parent="VBoxContainer/Container/Sprite" unique_id=1638317166]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource("8_lpsdf")
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=1415187576]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_r2xsu")
+theme_override_font_sizes/font_size = 24
+text = "Start Game!"
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1025963945]
+stream = ExtResource("10_lpsdf")
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/Container/Car/Red" to="." method="_on_red_pressed"]
+[connection signal="pressed" from="VBoxContainer/Container/Car/Blue" to="." method="_on_blue_pressed"]
+[connection signal="pressed" from="VBoxContainer/Container/Wheel/Small" to="." method="_on_small_pressed"]
+[connection signal="pressed" from="VBoxContainer/Container/Wheel/Medium" to="." method="_on_medium_pressed"]
+[connection signal="pressed" from="VBoxContainer/Container/Wheel/Big" to="." method="_on_big_pressed"]
+[connection signal="pressed" from="VBoxContainer/Container/Sprite/Human" to="." method="_on_human_pressed"]
+[connection signal="pressed" from="VBoxContainer/Container/Sprite/Robot" to="." method="_on_robot_pressed"]
+[connection signal="focus_entered" from="VBoxContainer/Start" to="." method="_on_start_focus_entered"]
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]

@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dpgq3frvlndy2"]
+
+[ext_resource type="Texture2D" uid="uid://dvoqufgn1pvpu" path="res://Assets/Pedals.png" id="1_rru68"]
+[ext_resource type="Script" uid="uid://dpmmnd1x0ql6d" path="res://Scripts/Others/TouchControls.gd" id="1_u7ijv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7ijv"]
+atlas = ExtResource("1_rru68")
+region = Rect2(1120, 80, 240, 344)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rru68"]
+atlas = ExtResource("1_rru68")
+region = Rect2(792, 232, 320, 200)
+
+[node name="Touch Controls" type="CanvasLayer" unique_id=2027450207]
+script = ExtResource("1_u7ijv")
+
+[node name="Container" type="Container" parent="." unique_id=1973351584]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_top = -340.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Right" type="TouchScreenButton" parent="Container" unique_id=495725388]
+texture_normal = SubResource("AtlasTexture_u7ijv")
+action = "Accelerate"
+
+[node name="Container2" type="Container" parent="." unique_id=485742605]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -200.0
+offset_right = 320.0
+grow_vertical = 0
+
+[node name="Left" type="TouchScreenButton" parent="Container2" unique_id=2008173918]
+texture_normal = SubResource("AtlasTexture_rru68")
+action = "Reverse"
