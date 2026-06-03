@@ -19,8 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://dnk41pqddjwae" path="res://Assets/Other/Clouds.png" id="16_dg1i2"]
 [ext_resource type="PackedScene" uid="uid://dpgq3frvlndy2" path="res://Scenes/UI/TouchControls.tscn" id="16_hicuo"]
 [ext_resource type="PackedScene" uid="uid://pfnfg4rbk23w" path="res://Scenes/UI/Pause.tscn" id="16_p8a37"]
-[ext_resource type="PackedScene" uid="uid://reud53r5yghq" path="res://Scenes/UI/End.tscn" id="17_1llgr"]
 [ext_resource type="AudioStream" uid="uid://bgcb260xo0y1c" path="res://Assets/Music/Hill Climb Racing (HCR 1 Original Theme).mp3" id="19_hhft1"]
+[ext_resource type="PackedScene" uid="uid://beri6uf6m05aw" path="res://Scenes/Others/Finish.tscn" id="19_p8a37"]
 
 [sub_resource type="Resource" id="Resource_nin7y"]
 script = ExtResource("3_6hpix")
@@ -505,9 +505,11 @@ rotation = 4.712389
 [node name="Border" type="CollisionShape2D" parent="Finish" unique_id=1167637575]
 shape = SubResource("WorldBoundaryShape2D_ps7fk")
 
-[node name="Touch Controls" parent="." unique_id=2027450207 instance=ExtResource("16_hicuo")]
+[node name="Finish2" parent="." unique_id=1547321629 instance=ExtResource("19_p8a37")]
+Level = "2"
+nextLevel = "uid://d08bcef6xeoao"
 
-[node name="End" parent="." unique_id=919968033 instance=ExtResource("17_1llgr")]
+[node name="Touch Controls" parent="." unique_id=2027450207 instance=ExtResource("16_hicuo")]
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=1706731805]
 stream = ExtResource("19_hhft1")

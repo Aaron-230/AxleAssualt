@@ -17,7 +17,7 @@ func UpdateFuel(Value):
 	else:
 		$UI/Fuel/Animation.play("Idle")
 
-
 func _on_finish_body_entered(body):
 	if body.name == "Vehicle":
-		$End/Panel.show()
+		$"Touch Controls".hide()
+		$End.show()
