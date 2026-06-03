@@ -1,7 +1,5 @@
 extends Node2D
 
-@export_file("*.tscn") var Level: String
-
 var Coins = 0
 
 func addCoins(Amount):
@@ -22,5 +20,4 @@ func UpdateFuel(Value):
 
 func _on_finish_body_entered(body):
 	if body.name == "Vehicle":
-		get_tree().paused = true
 		$Finish2/Panel.show()

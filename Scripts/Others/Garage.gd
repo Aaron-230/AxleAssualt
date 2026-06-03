@@ -20,9 +20,6 @@ var SelectedWheel: String
 var SelectedSprite: String
 var SelectedBody: String
 
-func _ready() -> void:
-	StartButton.disabled = true
-
 func _on_red_pressed() -> void:
 	SelectedCar = RedCar
 	Autoload.SelectedCar = RedCar
@@ -56,10 +53,7 @@ func _on_robot_pressed() -> void:
 	Autoload.SelectedBody = RobotBody
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file(nextScene)
-
-func _on_start_focus_entered() -> void:
 	if SelectedCar == '' || SelectedWheel == '' || SelectedSprite == '':
-		StartButton.disabled = true
+		pass
 	else:
-		StartButton.disabled = false
+		get_tree().change_scene_to_file(nextScene)

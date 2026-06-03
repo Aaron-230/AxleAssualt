@@ -9,9 +9,7 @@ func _ready() -> void:
 	$Panel.hide()
 
 func _on_next_pressed() -> void:
-	get_tree().paused = false
 	get_tree().change_scene_to_file(nextLevel)
 
 func _on_end_pressed() -> void:
-	get_tree().paused = false
 	get_tree().quit()
