@@ -1,10 +1,10 @@
 extends Node2D
 
-var Coins = 0
+func _ready():
+	$UI/Coin/Score.text = str(Autoload.getCoins())
 
-func addCoins(Amount):
-	Coins += Amount
-	$UI/Coin/Score.text = str(Coins)
+func updateCoins():
+	$UI/Coin/Score.text = str(Autoload.getCoins())
 
 func UpdateFuel(Value):
 	$UI/Fuel/Level.value = Value

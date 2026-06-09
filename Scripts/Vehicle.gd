@@ -26,7 +26,7 @@ func _physics_process(delta):
 		Driving = 0
 		$GameOver.stop()
 		if Input.is_action_pressed("Accelerate"):
-			apply_torque(-3000 * delta * 60)
+			apply_torque_impulse(-6000 * delta * 60)
 			
 			Driving += 1
 			for Wheel in Wheels:
@@ -34,7 +34,7 @@ func _physics_process(delta):
 					Wheel.apply_torque_impulse(Speed * delta * 60)
 		
 		if Input.is_action_pressed("Reverse"):
-			apply_torque(2000 * delta * 60)
+			apply_torque_impulse(6000 * delta * 60)
 			Driving += 1
 			for Wheel in Wheels:
 				if Wheel.angular_velocity > -MaxSpeed:
@@ -43,9 +43,12 @@ func _physics_process(delta):
 		if $GameOver.is_stopped():
 			$GameOver.start()
 	
-	if $Head.rotation_degrees > 180 || $Head.rotation_degrees < -90 && !Dead:
+	if $Head.rotation_degrees > 90 || $Head.rotation_degrees < -90 && !Dead:
 		Dead = true
+		Autoload.Coins = 0
+		Driving = 0
 		$Head/Neck.node_b = ""
+		$Head/Head.node_b = ""
 	
 	if Driving >= 1:
 		$Engine.pitch_scale = lerp($Engine.pitch_scale, 2.0, 2 * delta)
@@ -58,7 +61,7 @@ func Refuel():
 	get_parent().UpdateFuel(Fuel)
 
 func UseFuel(delta):
-	Fuel -= 10 * delta
+	Fuel -= 11 * delta
 	Fuel = clamp(Fuel, 0, 100)
 	get_parent().UpdateFuel(Fuel)
 

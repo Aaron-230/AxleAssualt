@@ -1,10 +1,10 @@
 extends Node2D
 
-var Coins = 0
+func _ready():
+	$UI/Coin/Score.text = str(Autoload.getCoins())
 
-func addCoins(Amount):
-	Coins += Amount
-	$UI/Coin/Score.text = str(Coins)
+func updateCoins():
+	$UI/Coin/Score.text = str(Autoload.getCoins())
 
 func UpdateFuel(Value):
 	$UI/Fuel/Level.value = Value
@@ -20,4 +20,4 @@ func UpdateFuel(Value):
 func _on_finish_body_entered(body):
 	if body.name == "Vehicle":
 		$"Touch Controls".hide()
-		$Finish2/Panel.show()
+		$End/Panel.show()

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dvtbicug8ip6p"
+path="res://.godot/imported/Rockin' the Town (City).mp3-1b573689b6547a3a4501f46dc4c51881.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Rockin' the Town (City).mp3"
+dest_files=["res://.godot/imported/Rockin' the Town (City).mp3-1b573689b6547a3a4501f46dc4c51881.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

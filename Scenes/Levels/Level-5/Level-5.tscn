@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://bep65prptt4it"]
 
-[ext_resource type="Script" uid="uid://1lmrls2o3etx" path="res://Scripts/Levels/Level-2/Level Manager.gd" id="1_klxyk"]
+[ext_resource type="Script" uid="uid://bodg5hfble88c" path="res://Scripts/Levels/Level-5/Level Manager.gd" id="1_ij6hx"]
 [ext_resource type="Script" uid="uid://c6kxvfqr4ewu1" path="res://addons/rmsmartshape/shapes/shape_closed.gd" id="2_obxyt"]
 [ext_resource type="Script" uid="uid://bwcf4pjgprn0k" path="res://addons/rmsmartshape/shapes/point.gd" id="3_0hli0"]
 [ext_resource type="Script" uid="uid://bo5f7qe27jfje" path="res://addons/rmsmartshape/shapes/point_array.gd" id="4_f6ygk"]
@@ -13,12 +13,17 @@
 [ext_resource type="Script" uid="uid://nc5bfedvnpgm" path="res://addons/rmsmartshape/materials/shape_material.gd" id="11_bqrpt"]
 [ext_resource type="PackedScene" uid="uid://c44mwk5kphssf" path="res://Scenes/Vehicle.tscn" id="12_kdu1n"]
 [ext_resource type="PackedScene" uid="uid://bsnaq0n5xyx41" path="res://Scenes/Levels/Level-5/UI.tscn" id="15_2sowk"]
+[ext_resource type="PackedScene" uid="uid://eucthexludwx" path="res://Scenes/Others/Fuel.tscn" id="15_jwtsq"]
+[ext_resource type="PackedScene" uid="uid://b56icggusoyr2" path="res://Scenes/Coins/5.tscn" id="16_uj5ei"]
 [ext_resource type="PackedScene" uid="uid://pfnfg4rbk23w" path="res://Scenes/UI/Pause.tscn" id="16_y5age"]
+[ext_resource type="PackedScene" uid="uid://32xrhnp0e4hl" path="res://Scenes/Coins/10.tscn" id="17_4l7xy"]
 [ext_resource type="Texture2D" uid="uid://6xpju7yy384j" path="res://Assets/Other/SceneBG.png" id="17_knc4h"]
 [ext_resource type="Texture2D" uid="uid://dnk41pqddjwae" path="res://Assets/Other/Clouds.png" id="18_dgnsl"]
+[ext_resource type="PackedScene" uid="uid://yb58ngw3ikh2" path="res://Scenes/Coins/25.tscn" id="18_x1t2q"]
 [ext_resource type="PackedScene" uid="uid://dpgq3frvlndy2" path="res://Scenes/UI/TouchControls.tscn" id="19_mvu37"]
+[ext_resource type="PackedScene" uid="uid://u10428ruabb2" path="res://Scenes/Coins/50.tscn" id="19_t6qwh"]
 [ext_resource type="PackedScene" uid="uid://reud53r5yghq" path="res://Scenes/UI/End.tscn" id="20_uthbc"]
-[ext_resource type="AudioStream" uid="uid://bgcb260xo0y1c" path="res://Assets/Music/Hill Climb Racing (HCR 1 Original Theme).mp3" id="21_cujpy"]
+[ext_resource type="AudioStream" uid="uid://dmnkh64com0h6" path="res://Assets/Music/Newton Against Gravity (Moon).mp3" id="24_uj5ei"]
 
 [sub_resource type="Resource" id="Resource_nin7y"]
 script = ExtResource("3_0hli0")
@@ -309,7 +314,7 @@ fill_textures = Array[Texture2D]([ExtResource("6_5shmd")])
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ps7fk"]
 
 [node name="Test" type="Node2D" unique_id=1889148783]
-script = ExtResource("1_klxyk")
+script = ExtResource("1_ij6hx")
 
 [node name="Static" type="StaticBody2D" parent="." unique_id=1550340721]
 
@@ -336,6 +341,166 @@ scale = Vector2(0.5, 0.5)
 transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
 
 [node name="Pause Menu" parent="." unique_id=1576515133 instance=ExtResource("16_y5age")]
+
+[node name="Fuel" type="Node" parent="." unique_id=168262326]
+
+[node name="Fuel" parent="Fuel" unique_id=614785545 instance=ExtResource("15_jwtsq")]
+position = Vector2(8890, -458)
+
+[node name="Fuel2" parent="Fuel" unique_id=1164766352 instance=ExtResource("15_jwtsq")]
+position = Vector2(27079, -138)
+
+[node name="Fuel3" parent="Fuel" unique_id=215828241 instance=ExtResource("15_jwtsq")]
+position = Vector2(40275, 268)
+
+[node name="Fuel4" parent="Fuel" unique_id=847709508 instance=ExtResource("15_jwtsq")]
+position = Vector2(56810, -1750)
+
+[node name="Fuel5" parent="Fuel" unique_id=939763559 instance=ExtResource("15_jwtsq")]
+position = Vector2(60707, -5137)
+
+[node name="Fuel6" parent="Fuel" unique_id=619004278 instance=ExtResource("15_jwtsq")]
+position = Vector2(77404, -5301)
+
+[node name="Fuel7" parent="Fuel" unique_id=1706884824 instance=ExtResource("15_jwtsq")]
+position = Vector2(81457, -11050)
+
+[node name="Fuel8" parent="Fuel" unique_id=1297441511 instance=ExtResource("15_jwtsq")]
+position = Vector2(102507, -12179)
+
+[node name="Fuel9" parent="Fuel" unique_id=1649894424 instance=ExtResource("15_jwtsq")]
+position = Vector2(113538, -19208)
+
+[node name="Fuel10" parent="Fuel" unique_id=1234940689 instance=ExtResource("15_jwtsq")]
+position = Vector2(123026, -20526)
+
+[node name="Fuel11" parent="Fuel" unique_id=2142815320 instance=ExtResource("15_jwtsq")]
+position = Vector2(137416, -18297)
+
+[node name="Fuel12" parent="Fuel" unique_id=1965347676 instance=ExtResource("15_jwtsq")]
+position = Vector2(151287, -22606)
+
+[node name="Fuel13" parent="Fuel" unique_id=1188006237 instance=ExtResource("15_jwtsq")]
+position = Vector2(165493, -15134)
+
+[node name="Fuel14" parent="Fuel" unique_id=1440958020 instance=ExtResource("15_jwtsq")]
+position = Vector2(174211, -8053)
+
+[node name="Fuel15" parent="Fuel" unique_id=269932859 instance=ExtResource("15_jwtsq")]
+position = Vector2(189333, -8280)
+
+[node name="Fuel16" parent="Fuel" unique_id=1949803340 instance=ExtResource("15_jwtsq")]
+position = Vector2(202009, -9865)
+
+[node name="Coins" type="Node" parent="." unique_id=1942669042]
+
+[node name="Coin" parent="Coins" unique_id=740244377 instance=ExtResource("16_uj5ei")]
+position = Vector2(8510, -372)
+
+[node name="Coin2" parent="Coins" unique_id=1226962292 instance=ExtResource("16_uj5ei")]
+position = Vector2(15005, -2714)
+
+[node name="Coin3" parent="Coins" unique_id=1016881060 instance=ExtResource("16_uj5ei")]
+position = Vector2(19534, -3898)
+
+[node name="Coin4" parent="Coins" unique_id=1523674279 instance=ExtResource("17_4l7xy")]
+position = Vector2(21147, -3392)
+
+[node name="Coin5" parent="Coins" unique_id=1849348638 instance=ExtResource("17_4l7xy")]
+position = Vector2(26398, -329)
+
+[node name="Coin6" parent="Coins" unique_id=262069495 instance=ExtResource("17_4l7xy")]
+position = Vector2(32732, 277)
+
+[node name="Coin7" parent="Coins" unique_id=1410939806 instance=ExtResource("17_4l7xy")]
+position = Vector2(35341, 261)
+
+[node name="Coin8" parent="Coins" unique_id=1153052433 instance=ExtResource("17_4l7xy")]
+position = Vector2(46267, 261)
+
+[node name="Coin9" parent="Coins" unique_id=1042024160 instance=ExtResource("17_4l7xy")]
+position = Vector2(56281, -1368)
+
+[node name="Coin10" parent="Coins" unique_id=1861270436 instance=ExtResource("17_4l7xy")]
+position = Vector2(57832, -3075)
+
+[node name="Coin11" parent="Coins" unique_id=889594158 instance=ExtResource("17_4l7xy")]
+position = Vector2(59494, -4920)
+
+[node name="Coin12" parent="Coins" unique_id=1650598803 instance=ExtResource("18_x1t2q")]
+position = Vector2(61807, -5162)
+
+[node name="Coin13" parent="Coins" unique_id=1943616166 instance=ExtResource("18_x1t2q")]
+position = Vector2(64787, -5201)
+
+[node name="Coin14" parent="Coins" unique_id=79680315 instance=ExtResource("18_x1t2q")]
+position = Vector2(73007, -5278)
+
+[node name="Coin15" parent="Coins" unique_id=633501747 instance=ExtResource("18_x1t2q")]
+position = Vector2(80078, -7312)
+
+[node name="Coin16" parent="Coins" unique_id=770466588 instance=ExtResource("18_x1t2q")]
+position = Vector2(81052, -10240)
+
+[node name="Coin17" parent="Coins" unique_id=1455887078 instance=ExtResource("18_x1t2q")]
+position = Vector2(83770, -11723)
+
+[node name="Coin18" parent="Coins" unique_id=1459329766 instance=ExtResource("19_t6qwh")]
+position = Vector2(85926, -11830)
+
+[node name="Coin19" parent="Coins" unique_id=214945696 instance=ExtResource("19_t6qwh")]
+position = Vector2(88834, -11902)
+
+[node name="Coin20" parent="Coins" unique_id=1314886940 instance=ExtResource("19_t6qwh")]
+position = Vector2(92251, -11998)
+
+[node name="Coin21" parent="Coins" unique_id=1808717926 instance=ExtResource("19_t6qwh")]
+position = Vector2(97670, -12141)
+
+[node name="Coin22" parent="Coins" unique_id=240726078 instance=ExtResource("19_t6qwh")]
+position = Vector2(100164, -12229)
+
+[node name="Coin23" parent="Coins" unique_id=557320505 instance=ExtResource("19_t6qwh")]
+position = Vector2(105941, -12332)
+
+[node name="Coin24" parent="Coins" unique_id=1379493960 instance=ExtResource("19_t6qwh")]
+position = Vector2(110531, -15099)
+
+[node name="Coin25" parent="Coins" unique_id=1345033213 instance=ExtResource("19_t6qwh")]
+position = Vector2(112932, -18488)
+
+[node name="Coin26" parent="Coins" unique_id=466291658 instance=ExtResource("19_t6qwh")]
+position = Vector2(116140, -21191)
+
+[node name="Coin27" parent="Coins" unique_id=824958472 instance=ExtResource("19_t6qwh")]
+position = Vector2(121829, -20832)
+
+[node name="Coin28" parent="Coins" unique_id=1788862309 instance=ExtResource("19_t6qwh")]
+position = Vector2(129676, -19119)
+
+[node name="Coin29" parent="Coins" unique_id=1324273706 instance=ExtResource("19_t6qwh")]
+position = Vector2(143582, -19499)
+
+[node name="Coin30" parent="Coins" unique_id=259791755 instance=ExtResource("19_t6qwh")]
+position = Vector2(150651, -22501)
+
+[node name="Coin31" parent="Coins" unique_id=1903139144 instance=ExtResource("19_t6qwh")]
+position = Vector2(155918, -21842)
+
+[node name="Coin32" parent="Coins" unique_id=1335581615 instance=ExtResource("19_t6qwh")]
+position = Vector2(159764, -19688)
+
+[node name="Coin33" parent="Coins" unique_id=1065444232 instance=ExtResource("19_t6qwh")]
+position = Vector2(164788, -15822)
+
+[node name="Coin34" parent="Coins" unique_id=567389027 instance=ExtResource("19_t6qwh")]
+position = Vector2(172554, -9217)
+
+[node name="Coin35" parent="Coins" unique_id=1894351026 instance=ExtResource("19_t6qwh")]
+position = Vector2(183028, -5435)
+
+[node name="Coin36" parent="Coins" unique_id=1635150178 instance=ExtResource("19_t6qwh")]
+position = Vector2(192577, -9226)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=956471746]
 
@@ -369,7 +534,7 @@ shape = SubResource("WorldBoundaryShape2D_ps7fk")
 [node name="End" parent="." unique_id=919968033 instance=ExtResource("20_uthbc")]
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=1706731805]
-stream = ExtResource("21_cujpy")
+stream = ExtResource("24_uj5ei")
 autoplay = true
 
 [connection signal="body_entered" from="Finish" to="." method="_on_finish_body_entered"]

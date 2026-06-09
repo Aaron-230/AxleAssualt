@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://ccekd2r8p4uf"]
 
-[ext_resource type="Script" uid="uid://1lmrls2o3etx" path="res://Scripts/Levels/Level-2/Level Manager.gd" id="1_8whw3"]
+[ext_resource type="Script" uid="uid://86gy0qf8eniw" path="res://Scripts/Levels/Level-4/Level Manager.gd" id="1_1113j"]
 [ext_resource type="Script" uid="uid://c6kxvfqr4ewu1" path="res://addons/rmsmartshape/shapes/shape_closed.gd" id="2_4ftqm"]
 [ext_resource type="Script" uid="uid://bwcf4pjgprn0k" path="res://addons/rmsmartshape/shapes/point.gd" id="3_piot4"]
 [ext_resource type="Script" uid="uid://bo5f7qe27jfje" path="res://addons/rmsmartshape/shapes/point_array.gd" id="4_ja50g"]
@@ -13,12 +13,14 @@
 [ext_resource type="Script" uid="uid://nc5bfedvnpgm" path="res://addons/rmsmartshape/materials/shape_material.gd" id="11_lj323"]
 [ext_resource type="PackedScene" uid="uid://c44mwk5kphssf" path="res://Scenes/Vehicle.tscn" id="12_yavoq"]
 [ext_resource type="PackedScene" uid="uid://cov0lrngjv53t" path="res://Scenes/Levels/Level-4/UI.tscn" id="15_j11mx"]
+[ext_resource type="PackedScene" uid="uid://eucthexludwx" path="res://Scenes/Others/Fuel.tscn" id="15_ole6e"]
+[ext_resource type="PackedScene" uid="uid://u10428ruabb2" path="res://Scenes/Coins/50.tscn" id="16_1113j"]
 [ext_resource type="PackedScene" uid="uid://pfnfg4rbk23w" path="res://Scenes/UI/Pause.tscn" id="16_vcnly"]
 [ext_resource type="Texture2D" uid="uid://6xpju7yy384j" path="res://Assets/Other/SceneBG.png" id="17_2fyvu"]
 [ext_resource type="PackedScene" uid="uid://beri6uf6m05aw" path="res://Scenes/Others/Finish.tscn" id="17_4rbo2"]
 [ext_resource type="Texture2D" uid="uid://dnk41pqddjwae" path="res://Assets/Other/Clouds.png" id="18_apru7"]
 [ext_resource type="PackedScene" uid="uid://dpgq3frvlndy2" path="res://Scenes/UI/TouchControls.tscn" id="19_kkkmy"]
-[ext_resource type="AudioStream" uid="uid://bgcb260xo0y1c" path="res://Assets/Music/Hill Climb Racing (HCR 1 Original Theme).mp3" id="21_2wi51"]
+[ext_resource type="AudioStream" uid="uid://dvtbicug8ip6p" path="res://Assets/Music/Rockin' the Town (City).mp3" id="21_1113j"]
 
 [sub_resource type="Resource" id="Resource_nin7y"]
 script = ExtResource("3_piot4")
@@ -320,7 +322,7 @@ fill_textures = Array[Texture2D]([ExtResource("6_o336b")])
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ps7fk"]
 
 [node name="Test" type="Node2D" unique_id=1889148783]
-script = ExtResource("1_8whw3")
+script = ExtResource("1_1113j")
 
 [node name="Static" type="StaticBody2D" parent="." unique_id=1550340721]
 
@@ -347,6 +349,124 @@ scale = Vector2(0.5, 0.5)
 transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
 
 [node name="Pause Menu" parent="." unique_id=1576515133 instance=ExtResource("16_vcnly")]
+
+[node name="Fuel" type="Node" parent="." unique_id=1867089683]
+
+[node name="Fuel" parent="Fuel" unique_id=614785545 instance=ExtResource("15_ole6e")]
+position = Vector2(10425, -1017)
+
+[node name="Fuel2" parent="Fuel" unique_id=1004215878 instance=ExtResource("15_ole6e")]
+position = Vector2(18766, -3804)
+
+[node name="Fuel3" parent="Fuel" unique_id=86029272 instance=ExtResource("15_ole6e")]
+position = Vector2(28077, -27)
+
+[node name="Fuel4" parent="Fuel" unique_id=46743912 instance=ExtResource("15_ole6e")]
+position = Vector2(45185, -3687)
+
+[node name="Fuel5" parent="Fuel" unique_id=634457357 instance=ExtResource("15_ole6e")]
+position = Vector2(63849, -428)
+
+[node name="Fuel6" parent="Fuel" unique_id=917610501 instance=ExtResource("15_ole6e")]
+position = Vector2(79578, -2772)
+
+[node name="Fuel7" parent="Fuel" unique_id=192206954 instance=ExtResource("15_ole6e")]
+position = Vector2(98430, -2535)
+
+[node name="Fuel8" parent="Fuel" unique_id=1006241806 instance=ExtResource("15_ole6e")]
+position = Vector2(124847, -4252)
+
+[node name="Fuel9" parent="Fuel" unique_id=1165021836 instance=ExtResource("15_ole6e")]
+position = Vector2(156830, -1243)
+
+[node name="Fuel10" parent="Fuel" unique_id=1457949649 instance=ExtResource("15_ole6e")]
+position = Vector2(182404, -4126)
+
+[node name="Fuel11" parent="Fuel" unique_id=623923505 instance=ExtResource("15_ole6e")]
+position = Vector2(197904, -2057)
+
+[node name="Fuel12" parent="Fuel" unique_id=2081887008 instance=ExtResource("15_ole6e")]
+position = Vector2(204883, -6465)
+
+[node name="Coins" type="Node" parent="." unique_id=1908451765]
+
+[node name="Coin" parent="Coins" unique_id=1353447262 instance=ExtResource("16_1113j")]
+position = Vector2(7554, -37)
+
+[node name="Coin2" parent="Coins" unique_id=73789195 instance=ExtResource("16_1113j")]
+position = Vector2(14692, -2558)
+
+[node name="Coin3" parent="Coins" unique_id=528279407 instance=ExtResource("16_1113j")]
+position = Vector2(20640, -3544)
+
+[node name="Coin4" parent="Coins" unique_id=449672270 instance=ExtResource("16_1113j")]
+position = Vector2(22898, -2024)
+
+[node name="Coin5" parent="Coins" unique_id=494219119 instance=ExtResource("16_1113j")]
+position = Vector2(26869, -313)
+
+[node name="Coin6" parent="Coins" unique_id=1989466454 instance=ExtResource("16_1113j")]
+position = Vector2(34180, -20)
+
+[node name="Coin7" parent="Coins" unique_id=1264994304 instance=ExtResource("16_1113j")]
+position = Vector2(39729, -1785)
+
+[node name="Coin8" parent="Coins" unique_id=489261897 instance=ExtResource("16_1113j")]
+position = Vector2(44618, -3641)
+
+[node name="Coin9" parent="Coins" unique_id=1352119286 instance=ExtResource("16_1113j")]
+position = Vector2(52200, -2804)
+
+[node name="Coin10" parent="Coins" unique_id=54032985 instance=ExtResource("16_1113j")]
+position = Vector2(62451, -537)
+
+[node name="Coin11" parent="Coins" unique_id=914094600 instance=ExtResource("16_1113j")]
+position = Vector2(71434, -1470)
+
+[node name="Coin12" parent="Coins" unique_id=2014579056 instance=ExtResource("16_1113j")]
+position = Vector2(86471, -3888)
+
+[node name="Coin13" parent="Coins" unique_id=1554412351 instance=ExtResource("16_1113j")]
+position = Vector2(97852, -2648)
+
+[node name="Coin14" parent="Coins" unique_id=273087242 instance=ExtResource("16_1113j")]
+position = Vector2(104627, -727)
+
+[node name="Coin15" parent="Coins" unique_id=422824111 instance=ExtResource("16_1113j")]
+position = Vector2(112875, -1286)
+
+[node name="Coin16" parent="Coins" unique_id=1923664627 instance=ExtResource("16_1113j")]
+position = Vector2(123997, -4115)
+
+[node name="Coin17" parent="Coins" unique_id=1877175621 instance=ExtResource("16_1113j")]
+position = Vector2(135242, -5219)
+
+[node name="Coin18" parent="Coins" unique_id=1775260844 instance=ExtResource("16_1113j")]
+position = Vector2(142136, -3996)
+
+[node name="Coin19" parent="Coins" unique_id=1541928637 instance=ExtResource("16_1113j")]
+position = Vector2(152412, -1451)
+
+[node name="Coin20" parent="Coins" unique_id=1991290374 instance=ExtResource("16_1113j")]
+position = Vector2(164402, -2967)
+
+[node name="Coin21" parent="Coins" unique_id=925752921 instance=ExtResource("16_1113j")]
+position = Vector2(174838, -5873)
+
+[node name="Coin22" parent="Coins" unique_id=106170778 instance=ExtResource("16_1113j")]
+position = Vector2(181735, -4465)
+
+[node name="Coin23" parent="Coins" unique_id=1057634604 instance=ExtResource("16_1113j")]
+position = Vector2(187540, -1786)
+
+[node name="Coin24" parent="Coins" unique_id=1075307786 instance=ExtResource("16_1113j")]
+position = Vector2(192986, -997)
+
+[node name="Coin25" parent="Coins" unique_id=540849501 instance=ExtResource("16_1113j")]
+position = Vector2(199700, -3321)
+
+[node name="Coin26" parent="Coins" unique_id=1326882598 instance=ExtResource("16_1113j")]
+position = Vector2(201916, -5903)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=956471746]
 
@@ -382,7 +502,7 @@ nextLevel = "uid://bep65prptt4it"
 [node name="Touch Controls" parent="." unique_id=2027450207 instance=ExtResource("19_kkkmy")]
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=1706731805]
-stream = ExtResource("21_2wi51")
+stream = ExtResource("21_1113j")
 autoplay = true
 
 [connection signal="body_entered" from="Finish" to="." method="_on_finish_body_entered"]

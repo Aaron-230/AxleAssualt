@@ -9,7 +9,20 @@
 [ext_resource type="Texture2D" uid="uid://dm05dy5d0k246" path="res://Assets/Car/WheelBig.png" id="5_2mg76"]
 [ext_resource type="Texture2D" uid="uid://cwgpmn36lcckg" path="res://Assets/Characters/Head.png" id="7_2mg76"]
 [ext_resource type="Texture2D" uid="uid://5q251ffujs8" path="res://Assets/Characters/Head2.png" id="8_lpsdf"]
-[ext_resource type="AudioStream" uid="uid://11yorvfp1cq7" path="res://Assets/Music/Funk Break (HCR 1 Menu Screen).mp3" id="10_lpsdf"]
+[ext_resource type="AudioStream" uid="uid://gp1criocku4o" path="res://Assets/Music/Top Off (Menu Screen).mp3" id="10_lpsdf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lpsdf"]
+bg_color = Color(0.16470589, 0.21568628, 0.23137255, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y0y5c"]
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
 
 [node name="Garage" type="Control" unique_id=541741]
 layout_mode = 3
@@ -55,13 +68,20 @@ theme_override_fonts/font = ExtResource("1_r2xsu")
 theme_override_font_sizes/font_size = 24
 text = "Select your Car: "
 
-[node name="Red" type="TextureButton" parent="VBoxContainer/Container/Car" unique_id=47579150]
+[node name="Blue" type="Button" parent="VBoxContainer/Container/Car" unique_id=1464708350]
 layout_mode = 2
-texture_normal = ExtResource("2_0s0jp")
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_styles/normal = SubResource("StyleBoxFlat_lpsdf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_y0y5c")
+icon = ExtResource("1_aivdc")
 
-[node name="Blue" type="TextureButton" parent="VBoxContainer/Container/Car" unique_id=1903796691]
+[node name="Red" type="Button" parent="VBoxContainer/Container/Car" unique_id=2129659538]
 layout_mode = 2
-texture_normal = ExtResource("1_aivdc")
+size_flags_vertical = 6
+theme_override_styles/normal = SubResource("StyleBoxFlat_lpsdf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_y0y5c")
+icon = ExtResource("2_0s0jp")
 
 [node name="Wheel" type="VBoxContainer" parent="VBoxContainer/Container" unique_id=744008804]
 clip_contents = true
@@ -73,23 +93,27 @@ theme_override_fonts/font = ExtResource("1_r2xsu")
 theme_override_font_sizes/font_size = 24
 text = "Select the Wheel: "
 
-[node name="Small" type="TextureButton" parent="VBoxContainer/Container/Wheel" unique_id=1752463794]
+[node name="Small" type="Button" parent="VBoxContainer/Container/Wheel" unique_id=1223584430]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture_normal = ExtResource("3_fxq6d")
+size_flags_vertical = 6
+theme_override_styles/normal = SubResource("StyleBoxFlat_lpsdf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_y0y5c")
+icon = ExtResource("3_fxq6d")
+icon_alignment = 1
 
-[node name="Medium" type="TextureButton" parent="VBoxContainer/Container/Wheel" unique_id=1074122892]
+[node name="Medium" type="Button" parent="VBoxContainer/Container/Wheel" unique_id=1656155696]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture_normal = ExtResource("4_r2xsu")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lpsdf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_y0y5c")
+icon = ExtResource("4_r2xsu")
+icon_alignment = 1
 
-[node name="Big" type="TextureButton" parent="VBoxContainer/Container/Wheel" unique_id=533464639]
+[node name="Big" type="Button" parent="VBoxContainer/Container/Wheel" unique_id=249586404]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture_normal = ExtResource("5_2mg76")
+theme_override_styles/normal = SubResource("StyleBoxFlat_lpsdf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_y0y5c")
+icon = ExtResource("5_2mg76")
+icon_alignment = 1
 
 [node name="Sprite" type="VBoxContainer" parent="VBoxContainer/Container" unique_id=1212893002]
 layout_mode = 2
@@ -100,17 +124,21 @@ theme_override_fonts/font = ExtResource("1_r2xsu")
 theme_override_font_sizes/font_size = 24
 text = "Select the Character: "
 
-[node name="Human" type="TextureButton" parent="VBoxContainer/Container/Sprite" unique_id=1139621497]
+[node name="Human" type="Button" parent="VBoxContainer/Container/Sprite" unique_id=776288636]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 6
-texture_normal = ExtResource("7_2mg76")
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_lpsdf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_y0y5c")
+icon = ExtResource("7_2mg76")
+icon_alignment = 1
 
-[node name="Robot" type="TextureButton" parent="VBoxContainer/Container/Sprite" unique_id=1638317166]
+[node name="Robot" type="Button" parent="VBoxContainer/Container/Sprite" unique_id=2005117783]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 6
-texture_normal = ExtResource("8_lpsdf")
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_lpsdf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_y0y5c")
+icon = ExtResource("8_lpsdf")
+icon_alignment = 1
 
 [node name="Start" type="Button" parent="VBoxContainer" unique_id=1415187576]
 layout_mode = 2
@@ -122,9 +150,10 @@ text = "Start Game!"
 stream = ExtResource("10_lpsdf")
 autoplay = true
 
-[connection signal="pressed" from="VBoxContainer/Container/Car/Red" to="." method="_on_red_pressed"]
 [connection signal="pressed" from="VBoxContainer/Container/Car/Blue" to="." method="_on_blue_pressed"]
+[connection signal="pressed" from="VBoxContainer/Container/Car/Red" to="." method="_on_red_pressed"]
 [connection signal="pressed" from="VBoxContainer/Container/Wheel/Small" to="." method="_on_small_pressed"]
+[connection signal="pressed" from="VBoxContainer/Container/Wheel/Medium" to="." method="_on_mid_pressed"]
 [connection signal="pressed" from="VBoxContainer/Container/Wheel/Medium" to="." method="_on_medium_pressed"]
 [connection signal="pressed" from="VBoxContainer/Container/Wheel/Big" to="." method="_on_big_pressed"]
 [connection signal="pressed" from="VBoxContainer/Container/Sprite/Human" to="." method="_on_human_pressed"]

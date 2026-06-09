@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://gp1criocku4o"
+path="res://.godot/imported/Top Off (Menu Screen).mp3-1682744766051b3153e92c72d0333356.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Top Off (Menu Screen).mp3"
+dest_files=["res://.godot/imported/Top Off (Menu Screen).mp3-1682744766051b3153e92c72d0333356.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

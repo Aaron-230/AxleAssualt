@@ -19,8 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://dnk41pqddjwae" path="res://Assets/Other/Clouds.png" id="16_dg1i2"]
 [ext_resource type="PackedScene" uid="uid://dpgq3frvlndy2" path="res://Scenes/UI/TouchControls.tscn" id="16_hicuo"]
 [ext_resource type="PackedScene" uid="uid://pfnfg4rbk23w" path="res://Scenes/UI/Pause.tscn" id="16_p8a37"]
-[ext_resource type="AudioStream" uid="uid://bgcb260xo0y1c" path="res://Assets/Music/Hill Climb Racing (HCR 1 Original Theme).mp3" id="19_hhft1"]
 [ext_resource type="PackedScene" uid="uid://beri6uf6m05aw" path="res://Scenes/Others/Finish.tscn" id="19_p8a37"]
+[ext_resource type="AudioStream" uid="uid://b7yr1xy3ealwy" path="res://Assets/Music/Down to Route 66 (Desert Valley).mp3" id="21_p8a37"]
 
 [sub_resource type="Resource" id="Resource_nin7y"]
 script = ExtResource("3_6hpix")
@@ -63,7 +63,7 @@ script = ExtResource("3_6hpix")
 position = Vector2(5008.5117, 986.97363)
 point_in = Vector2(-3799.1436, 1325.2832)
 point_out = Vector2(3799.1436, -1325.2832)
-texture_idx = -3
+texture_idx = 8
 
 [sub_resource type="Resource" id="Resource_nwpij"]
 script = ExtResource("3_6hpix")
@@ -178,7 +178,7 @@ script = ExtResource("5_7d1lr")
 texture = ExtResource("7_icokq")
 mesh = SubResource("ArrayMesh_gjwnt")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_6hpix"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_p8a37"]
 _surfaces = [{
 "aabb": AABB(228136.44, -16105.152, 0, 2622.5938, 444.53516, 1e-05),
 "attribute_data": PackedByteArray("/////wAAAAAAAAAAAAAAAAAAAAD/////AAAAAAAAgD8AAAAAAACAP/////8AACRCAACAPwAAJEIAAIA//////wAAJEIAAAAAAAAkQgAAAAA="),
@@ -191,12 +191,12 @@ _surfaces = [{
 "vertex_data": PackedByteArray("HMpeSD+xdcYAAAAArMteSHiydMYAAAAAwllhSNOkesYAAAAAGllhSJyke8YAAAAA/3//f73vIEj/f/9/ve8gSP9//3/A7x9I/3//f8DvH0g=")
 }]
 
-[sub_resource type="Resource" id="Resource_in242"]
+[sub_resource type="Resource" id="Resource_p6kqu"]
 script = ExtResource("5_7d1lr")
 texture = ExtResource("7_icokq")
-mesh = SubResource("ArrayMesh_6hpix")
+mesh = SubResource("ArrayMesh_p8a37")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_p6kqu"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_2prec"]
 _surfaces = [{
 "aabb": AABB(-7834.748, -16050.416, 0, 238991.2, 18770.646, 1e-05),
 "attribute_data": PackedByteArray("/////wAAAAAAAAAAAAAAAAAAAAD/////AAAAAAAAgD8AAAAAAACAP/////+Xjf5CAACAP5eN/kIAAIA//////5eN/kIAAAAAl43+QgAAAAD/////dJxWQwAAgD90nFZDAACAP/////90nFZDAAAAAHScVkMAAAAA/////wJ6c0MAAIA/AnpzQwAAgD//////AnpzQwAAAAACenNDAAAAAP/////uHHxDAACAP+4cfEMAAIA//////+4cfEMAAAAA7hx8QwAAAAD/////ULmAQwAAgD9QuYBDAACAP/////9QuYBDAAAAAFC5gEMAAAAA/////28JdEUAAIA/bwl0RQAAgD//////bwl0RQAAAABvCXRFAAAAAP////8AgHhFAACAPwCAeEUAAIA//////wCAeEUAAAAAAIB4RQAAAAA="),
@@ -209,12 +209,12 @@ _surfaces = [{
 "vertex_data": PackedByteArray("mGlhSKrJesYAAAAAwllhSNOkesYAAAAAHa1hSF0b98UAAAAAHb1hSCEf98UAAAAAdohhSDY9EcUAAAAAYphhSJ7XEMUAAAAAkjlhSGNM/8MAAAAAzkhhSMeD9cMAAAAAcP9gSPt1ycEAAAAA8gphSNsxmkEAAAAAsrdgSGva+UIAAAAAnLtgSMr6OkMAAAAAVQxMxbMDJkUAAAAAxwZMxa0DKkUAAAAAgtH0xbUDJkUAAAAA/NX0xasDKkUAAAAA/3//fwmFhQL/f/9/CYWFAv9//3/vgHcA/3//f++AdwD/f/9/Z3TMBf9//39mdMwF/3//f/tggg//f/9/92CDD/9//3/8QIEf/3//f/5AgB//f/9/4RkPM/9//3/hGQ4z/3//f7AApz//f/9/sACnP/9//38AAP8//3//fwAA/z8=")
 }]
 
-[sub_resource type="Resource" id="Resource_2prec"]
+[sub_resource type="Resource" id="Resource_mpwcb"]
 script = ExtResource("5_7d1lr")
 texture = ExtResource("7_icokq")
-mesh = SubResource("ArrayMesh_p6kqu")
+mesh = SubResource("ArrayMesh_2prec")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_mpwcb"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_yldxa"]
 _surfaces = [{
 "aabb": AABB(-7898.1885, -9821.043, 0, 173.00537, 12477.274, 1e-05),
 "attribute_data": PackedByteArray("/////wAAAAAAAAAAAAAAAAAAAAD/////AAAAAAAAgD8AAAAAAACAP/////8AAENDAACAPwAAQ0MAAIA//////wAAQ0MAAAAAAABDQwAAAAA="),
@@ -227,12 +227,12 @@ _surfaces = [{
 "vertex_data": PackedByteArray("gtH2xbUDJkUAAAAAgtH0xbUDJkUAAAAAd2nxxSx0GcYAAAAAJGnzxQxrGcYAAAAA/3//fxuBcX//f/9/G4Fxf/9//38bgXF//3//fxuBcX8=")
 }]
 
-[sub_resource type="Resource" id="Resource_yldxa"]
+[sub_resource type="Resource" id="Resource_02c3u"]
 script = ExtResource("5_7d1lr")
 texture = ExtResource("7_icokq")
-mesh = SubResource("ArrayMesh_mpwcb")
+mesh = SubResource("ArrayMesh_yldxa")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_p8a37"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_60h5p"]
 _surfaces = [{
 "aabb": AABB(-7725.183, -9977.057, 0, 2590.9556, 156.01367, 1e-05),
 "attribute_data": PackedByteArray("/////wAAAAAAAAAAAAAAAAAAAAD/////AAAAAAAAgD8AAAAAAACAP/////8AACBCAACAPwAAIEIAAIA//////wAAIEIAAAAAAAAgQgAAAAA="),
@@ -245,12 +245,12 @@ _surfaces = [{
 "vertex_data": PackedByteArray("/mTxxSp0GsYAAAAAd2nxxSx0GcYAAAAA0nGgxUnmGsYAAAAAo7KgxTrkG8YAAAAA/3//f5X7NEL/f/9/lfs0Qv9//3+X+zNC/3//f5f7M0I=")
 }]
 
-[sub_resource type="Resource" id="Resource_p6kqu"]
+[sub_resource type="Resource" id="Resource_uqelq"]
 script = ExtResource("5_7d1lr")
 texture = ExtResource("7_icokq")
-mesh = SubResource("ArrayMesh_p8a37")
+mesh = SubResource("ArrayMesh_60h5p")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_2prec"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_tk3ih"]
 _surfaces = [{
 "aabb": AABB(-5134.2275, -9915.854, 0, 2472.5903, 11008.811, 1e-05),
 "attribute_data": PackedByteArray("/////wAAAAAAAAAAAAAAAAAAAAD/////AAAAAAAAgD8AAAAAAACAP/////8jkKVCAACAPyOQpUIAAIA//////yOQpUIAAAAAI5ClQgAAAAD/////ecoOQwAAgD95yg5DAACAP/////95yg5DAAAAAHnKDkMAAAAA/////6zZJEMAAIA/rNkkQwAAgD//////rNkkQwAAAACs2SRDAAAAAP////9dkyxDAACAP12TLEMAAIA//////12TLEMAAAAAXZMsQwAAAAD/////AAAyQwAAgD8AADJDAACAP/////8AADJDAAAAAAAAMkMAAAAA"),
@@ -263,10 +263,10 @@ _surfaces = [{
 "vertex_data": PackedByteArray("JXKexWrvGsYAAAAA0nGgxUnmGsYAAAAAaYGLxbi0kcUAAAAATYiJxWwIksUAAAAAYAFnxaGcYcQAAAAAoCZjxUPjZcQAAAAAWItJxdHR10MAAAAAoOxFxcc0ykMAAAAAWWo5xdSUV0QAAAAAPV42xYQ3TUQAAAAAqlAoxaCeiEQAAAAAMlomxSSmgUQAAAAA/3//f3uOPgf/f/9/e44+B/9//38xkhkJ/3//fzGSGQn/f/9/ypvlDf9//3/Km+UN/3//f/GoeRT/f/9/8Kh4FP9//3/Pumgd/3//f866Zx3/f/9/acW0Iv9//39nxbQi")
 }]
 
-[sub_resource type="Resource" id="Resource_mpwcb"]
+[sub_resource type="Resource" id="Resource_2g0jy"]
 script = ExtResource("5_7d1lr")
 texture = ExtResource("7_icokq")
-mesh = SubResource("ArrayMesh_2prec")
+mesh = SubResource("ArrayMesh_tk3ih")
 
 [sub_resource type="Resource" id="Resource_5nfnx"]
 script = ExtResource("9_up5cm")
@@ -299,7 +299,7 @@ script = ExtResource("1_6hpix")
 position = Vector2(800, -176)
 script = ExtResource("2_1llgr")
 _points = SubResource("Resource_fc4x2")
-_meshes = Array[ExtResource("5_7d1lr")]([SubResource("Resource_cw7it"), SubResource("Resource_fp0oi"), SubResource("Resource_in242"), SubResource("Resource_2prec"), SubResource("Resource_yldxa"), SubResource("Resource_p6kqu"), SubResource("Resource_mpwcb")])
+_meshes = Array[ExtResource("5_7d1lr")]([SubResource("Resource_cw7it"), SubResource("Resource_fp0oi"), SubResource("Resource_p6kqu"), SubResource("Resource_mpwcb"), SubResource("Resource_02c3u"), SubResource("Resource_uqelq"), SubResource("Resource_2g0jy")])
 shape_material = SubResource("Resource_oqyyu")
 collision_polygon_node_path = NodePath("../CollisionPolygon2D")
 metadata/_custom_type_script = "uid://c6kxvfqr4ewu1"
@@ -346,131 +346,99 @@ position = Vector2(203876, -6670)
 
 [node name="Coin" parent="Coins" unique_id=1883425110 instance=ExtResource("14_7d1lr")]
 position = Vector2(1327, 1397)
-Value = 10
 
 [node name="Coin2" parent="Coins" unique_id=560107293 instance=ExtResource("14_7d1lr")]
 position = Vector2(5088, 829)
-Value = 10
 
 [node name="Coin3" parent="Coins" unique_id=251432923 instance=ExtResource("14_7d1lr")]
 position = Vector2(10602, -1118)
-Value = 10
 
 [node name="Coin4" parent="Coins" unique_id=2113599275 instance=ExtResource("14_7d1lr")]
 position = Vector2(18611, -3890)
-Value = 10
 
 [node name="Coin5" parent="Coins" unique_id=1898593937 instance=ExtResource("14_7d1lr")]
 position = Vector2(22568, -3811)
-Value = 10
 
 [node name="Coin6" parent="Coins" unique_id=1146671383 instance=ExtResource("14_7d1lr")]
 position = Vector2(31944, -3493)
-Value = 10
 
 [node name="Coin7" parent="Coins" unique_id=904394911 instance=ExtResource("14_7d1lr")]
 position = Vector2(39579, -3207)
-Value = 10
 
 [node name="Coin8" parent="Coins" unique_id=1323518584 instance=ExtResource("14_7d1lr")]
 position = Vector2(45967, -3374)
-Value = 10
 
 [node name="Coin9" parent="Coins" unique_id=1918569345 instance=ExtResource("14_7d1lr")]
 position = Vector2(55843, -3772)
-Value = 10
 
 [node name="Coin10" parent="Coins" unique_id=301203414 instance=ExtResource("14_7d1lr")]
 position = Vector2(60880, -4471)
-Value = 10
 
 [node name="Coin11" parent="Coins" unique_id=1216573326 instance=ExtResource("14_7d1lr")]
 position = Vector2(64034, -5250)
-Value = 10
 
 [node name="Coin12" parent="Coins" unique_id=486209643 instance=ExtResource("14_7d1lr")]
 position = Vector2(67760, -7109)
-Value = 10
 
 [node name="Coin13" parent="Coins" unique_id=914326863 instance=ExtResource("14_7d1lr")]
 position = Vector2(71423, -8992)
-Value = 10
 
 [node name="Coin14" parent="Coins" unique_id=1966038359 instance=ExtResource("14_7d1lr")]
 position = Vector2(73393, -10541)
-Value = 10
 
 [node name="Coin15" parent="Coins" unique_id=91672371 instance=ExtResource("14_7d1lr")]
 position = Vector2(76603, -12353)
-Value = 10
 
 [node name="Coin16" parent="Coins" unique_id=142879453 instance=ExtResource("14_7d1lr")]
 position = Vector2(80536, -13783)
-Value = 10
 
 [node name="Coin17" parent="Coins" unique_id=281577338 instance=ExtResource("14_7d1lr")]
 position = Vector2(86503, -14482)
-Value = 10
 
 [node name="Coin18" parent="Coins" unique_id=1365182023 instance=ExtResource("14_7d1lr")]
 position = Vector2(94811, -15473)
-Value = 10
 
 [node name="Coin19" parent="Coins" unique_id=1129928939 instance=ExtResource("14_7d1lr")]
 position = Vector2(103746, -16458)
-Value = 10
 
 [node name="Coin20" parent="Coins" unique_id=1449975834 instance=ExtResource("14_7d1lr")]
 position = Vector2(112819, -15408)
-Value = 10
 
 [node name="Coin21" parent="Coins" unique_id=705453199 instance=ExtResource("14_7d1lr")]
 position = Vector2(119913, -13212)
-Value = 10
 
 [node name="Coin22" parent="Coins" unique_id=1835938670 instance=ExtResource("14_7d1lr")]
 position = Vector2(125234, -11445)
-Value = 10
 
 [node name="Coin23" parent="Coins" unique_id=1316464569 instance=ExtResource("14_7d1lr")]
 position = Vector2(130579, -9609)
-Value = 10
 
 [node name="Coin24" parent="Coins" unique_id=1968995472 instance=ExtResource("14_7d1lr")]
 position = Vector2(141982, -6042)
-Value = 10
 
 [node name="Coin25" parent="Coins" unique_id=494525207 instance=ExtResource("14_7d1lr")]
 position = Vector2(153137, -3472)
-Value = 10
 
 [node name="Coin26" parent="Coins" unique_id=1718613385 instance=ExtResource("14_7d1lr")]
 position = Vector2(160933, -2240)
-Value = 10
 
 [node name="Coin27" parent="Coins" unique_id=790496060 instance=ExtResource("14_7d1lr")]
 position = Vector2(165007, -2182)
-Value = 10
 
 [node name="Coin28" parent="Coins" unique_id=1084458015 instance=ExtResource("14_7d1lr")]
 position = Vector2(170749, -2890)
-Value = 10
 
 [node name="Coin29" parent="Coins" unique_id=2034828636 instance=ExtResource("14_7d1lr")]
 position = Vector2(179736, -6283)
-Value = 10
 
 [node name="Coin30" parent="Coins" unique_id=730606538 instance=ExtResource("14_7d1lr")]
 position = Vector2(187385, -6577)
-Value = 10
 
 [node name="Coin31" parent="Coins" unique_id=1969750283 instance=ExtResource("14_7d1lr")]
 position = Vector2(193401, -6514)
-Value = 10
 
 [node name="Coin32" parent="Coins" unique_id=335520013 instance=ExtResource("14_7d1lr")]
 position = Vector2(199080, -6630)
-Value = 10
 
 [node name="UI" parent="." unique_id=717673355 instance=ExtResource("15_7wxpc")]
 scale = Vector2(0.5, 0.5)
@@ -512,7 +480,7 @@ nextLevel = "uid://d08bcef6xeoao"
 [node name="Touch Controls" parent="." unique_id=2027450207 instance=ExtResource("16_hicuo")]
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=1706731805]
-stream = ExtResource("19_hhft1")
+stream = ExtResource("21_p8a37")
 autoplay = true
 
 [connection signal="body_entered" from="Finish" to="." method="_on_finish_body_entered"]
