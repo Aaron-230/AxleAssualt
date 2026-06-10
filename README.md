@@ -12,6 +12,8 @@ There are Mobile controls and for PC, the 'A' key is for Brake/Reverse and the '
 
 You can set different goals for this game: Beat the Game, Gain the most points and so on.
 
+I used this YouTube Tutorial [Link](https://youtu.be/nPX9MrnvNLo?si=coDKuctBq7iJeOxc) to learn the basics needed for the project. I, then added A Garage System where you can configure your character along with Autoload to save the Coin Point System and added Mobile Control UI in order to play on the phone. 
+
 In the next update, I will make improvements to the game and add Multiplayer features and a rank system.
 
 This game is made using Godot and You can play this game in [Itch.io](https://itch.io/). You can find the playable link after the Demo Video (till level 2)
