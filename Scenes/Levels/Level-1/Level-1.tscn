@@ -511,9 +511,9 @@ transform = Transform2D(0.5, 0, 0, 0.5, 0, 0)
 
 [node name="Pause Menu" parent="." unique_id=696522152 instance=ExtResource("16_q16yx")]
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=956471746]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1081280376]
 
-[node name="Hill" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1616928370]
+[node name="Hill" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1408096399]
 position = Vector2(0, -255)
 motion_scale = Vector2(0.1, 0.1)
 motion_mirroring = Vector2(3000, 0)

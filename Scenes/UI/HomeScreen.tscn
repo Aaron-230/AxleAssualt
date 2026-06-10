@@ -17,6 +17,7 @@ script = ExtResource("1_7l8f1")
 nextScene = "uid://56yiufrgtgp0"
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1063640864]
+layout_direction = 4
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -26,6 +27,7 @@ grow_vertical = 2
 stream = ExtResource("2_v8cie")
 volume_db = -80.0
 autoplay = true
+expand = true
 loop = true
 
 [node name="Panel" type="Panel" parent="." unique_id=424620572]

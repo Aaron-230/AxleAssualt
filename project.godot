@@ -26,7 +26,7 @@ Autoload="*uid://ckhehm0aw0y5h"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/stretch/aspect="keep_height"
+window/stretch/mode="canvas_items"
 
 [editor]
 
