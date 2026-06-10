@@ -16,7 +16,8 @@ In the next update, I will make improvements to the game and add Multiplayer fea
 
 This game is made using Godot and You can play this game in [Itch.io](https://itch.io/). You can find the playable link after the Demo Video (till level 2)
 
-![Demo Video](https://github.com/user-attachments/assets/44b6dd93-731d-4dd2-a9c2-2e39357c812e)
+https://github.com/user-attachments/assets/2c116856-6ef0-47e5-b568-a45256da8b25
+
 
 [DEMO LINK!!!](https://aaron-230.itch.io/axle-assault)
 
