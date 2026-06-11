@@ -21,7 +21,7 @@ This game is made using Godot and You can play this game in [Itch.io](https://it
 https://github.com/user-attachments/assets/2c116856-6ef0-47e5-b568-a45256da8b25
 
 
-[DEMO LINK!!!](https://aaron-230.itch.io/axle-assault)
+[DEMO LINK!!!](https://lowspecdev.itch.io/axle-assault)
 
 Feel Free to make contributions to the project to add new mechanics and maybe an combat system! Any contributions you make are **greatly appreciated**.
 Here is how to contribute to the project!
