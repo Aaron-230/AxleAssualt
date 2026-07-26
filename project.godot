@@ -17,6 +17,7 @@ ss2d/version="3.3.1"
 config/name="Axle Assault"
 run/main_scene="uid://nwlusgx4aehh"
 config/features=PackedStringArray("4.6", "GL Compatibility")
+config/icon="uid://dr76f0a3umn1d"
 
 [autoload]
 
